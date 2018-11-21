@@ -24,9 +24,7 @@ public class StreamExercise
 		Optional<String> concatenated = concatenate(listOfStrings);
 		System.out.println(concatenated);
 		Optional<Integer> sumOfEvens = sumOfEvenNumbers(listOfNumbers);
-		System.out.println(listOfStrings.stream()
-				.map(length -> length.length())
-				.reduce(Integer::max));
+		System.out.println(sumOfEvens);
 				
 	}
 	
@@ -64,7 +62,6 @@ public class StreamExercise
 				.filter(number -> isEven(number))
 				.reduce(Integer::sum);
 		
-		System.out.println(evenNumbers);
 		return evenNumbers;
 	}
 	
